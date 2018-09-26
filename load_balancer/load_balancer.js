@@ -18,6 +18,8 @@ var { exec } = require('child_process');
 var mysql = require('mysql');
 const { Status } = require('./status.js');
 const { check } = require('../util/environmentCheck.js');
+const { Comm } = require('./comm.js');
+
 /* The environment variable LBCONFIG will contain the path to the config file.
   The actual path for the config is "../deploy/configs/load_balancer/nodes_data_conf.json"
   For the docker containers, the path is /etc/load_balancer/nodes_data_conf.json */
