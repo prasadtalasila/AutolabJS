@@ -20,7 +20,7 @@
         dest: "../../main_server/public/admin.html"
         mode: '0600'
 
-- hosts: all
+- hosts: mainserver
   tasks:
     #tests configuration
     - name: Create index.html webpage from template file for tests

@@ -10,9 +10,12 @@ addons:
   apt:
     sources:
     - ubuntu-toolchain-r-test
+    - ppa:ansible/ansible
     packages:
     - gcc-6
     - g++-6
+    - software-properties-common
+    - ansible
 
 services:
  - mysql
