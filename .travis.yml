@@ -10,12 +10,9 @@ addons:
   apt:
     sources:
     - ubuntu-toolchain-r-test
-    - ppa:ansible/ansible
     packages:
     - gcc-6
     - g++-6
-    - software-properties-common
-    - ansible
 
 services:
  - mysql
@@ -24,6 +21,9 @@ env:
 - TEST_TYPE="unit_tests"
 - TEST_TYPE="functional_tests"
 - TEST_TYPE="component_tests"
+
+before_install:
+ - sudo bash scripts/travis_install.sh
 
 before_script:
  - bash tests/install.sh
