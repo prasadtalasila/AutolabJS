@@ -11,6 +11,7 @@
 #   TESTDIR : name for the temporary directory where tests will be run
 
 set -ex
+cd ../test_modules
 TESTDIR='unit_tests'
 export TESTDIR
 TYPE_OF_TEST='functional' $BATS bats/unit_tests.bats
